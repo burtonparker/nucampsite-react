@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     Breadcrumb, BreadcrumbItem,
-    Button, Form, FormGroup, Label, Input, Col
+    Button, Form, FormGroup, Label, Input, Col, FormFeedback 
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { useDebugValue } from 'react';
@@ -18,7 +18,13 @@ class Contact extends Component {
             email: '',
             agree: false,
             contactType: 'By Phone',
-            feedback: ''
+            feedback: '',
+            touched: {
+                firstName: false,
+                lastName: false,
+                phoneNum: false,
+                email: false
+            }
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -83,6 +89,7 @@ class Contact extends Component {
                                         <Input type="text" id="firstName" name="firstName"
                                             placeholder="First Name"
                                             value={this.state.firstName}
+                                            onBlur={this.handleBlur("firstName")}
                                             onChange={this.handleInputChange} />
                                     </Col>
                                 </FormGroup>
