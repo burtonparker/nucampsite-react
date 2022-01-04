@@ -154,11 +154,9 @@ class CommentForm extends Component {
                                             }}
                                         />
                                 </div>
-                                <div className="form-group">
                                         <Button type="submit" color="primary">
                                             Submit
                                         </Button>
-                                </div>
                             </LocalForm>
                     </ModalBody>
                 </Modal>
