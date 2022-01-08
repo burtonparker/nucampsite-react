@@ -35,6 +35,7 @@ class Contact extends Component {
     }
 
     handleSubmit(values) {
+        // postFeedback right here, is going to send all of the above values into newFeedback in our ActionCreators.js file.
         this.props.postFeedback(values);
         this.props.resetFeedbackForm();
     }

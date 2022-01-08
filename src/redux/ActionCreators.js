@@ -219,6 +219,7 @@ export const postPartners = (name, image, description) => dispatch => {
 };
 
 // going to post some feedback, Karen Mode engaged
+// postFeedback here, is receiving all that good good data from ContactComponent
 
 export const postFeedback = (newFeedback) => () => {
     

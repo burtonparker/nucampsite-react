@@ -21,6 +21,7 @@ const mapStateToProps = state => {
     }
 }
 
+// Down below here, where we are calling postFeedback with feedbackData, it doesn't matter what we call feedbackData, it doesn't refer to any prior existing thing
 const mapDispatchToProps = {
     postComment: (campsiteId, rating, author, text) => (postComment(campsiteId, rating, author, text)),
     postFeedback: (feedbackData) => (postFeedback(feedbackData)),
