@@ -23,7 +23,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     postComment: (campsiteId, rating, author, text) => (postComment(campsiteId, rating, author, text)),
-    postFeedback: (firstname, lastname, phoneNum, email, agree, contactType, feedback) => (postFeedback(firstname, lastname, phoneNum, email, agree, contactType, feedback)),
+    postFeedback: (feedbackData) => (postFeedback(feedbackData)),
     fetchCampsites: () => (fetchCampsites()),
     resetFeedbackForm: () => (actions.reset('feedbackForm')),
     fetchComments: () => (fetchComments()),
